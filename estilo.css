@@ -9,6 +9,8 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #f2f2f2;
+    min-height: 100vh; /* Garante que o corpo da página ocupe toda a altura da viewport */
+    position: relative; /* Necessário para o posicionamento do footer */
 }
 
 .container {
@@ -25,7 +27,13 @@ header {
 }
 
 header h1 {
-    font-size: 24px;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
     text-align: center;
 }
 
@@ -54,7 +62,7 @@ section {
 }
 
 section h2 {
-    font-size: 28px;
+    font-size: 24px;
     margin-bottom: 20px;
     text-align: center;
 }
@@ -67,13 +75,56 @@ section p {
 section ul {
     list-style-type: none;
     padding-left: 20px;
+    text-align: center;
 }
 
 section ul li {
     margin-bottom: 10px;
 }
 
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form textarea {
+    height: 100px;
+}
+
+form button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
 footer {
+    margin-top: 10px;
     background-color: #333;
     color: #fff;
     text-align: center;
